@@ -5,7 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages= {"neusoft.oa.hr.mapper", "neusoft.oa.comsumption.mapper"})
+@MapperScan(basePackages= {"neusoft.oa.hr.mapper",
+		"neusoft.oa.comsumption.mapper",
+		"neusoft.oa.form.mapper"})
 public class NeusoftHotelManagementWebApplication {
 
 	public static void main(String[] args) {
