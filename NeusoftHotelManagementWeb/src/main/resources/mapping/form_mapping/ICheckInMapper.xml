@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="neusoft.oa.form.mapper.ICheckInMapper">
+
+	<resultMap id ="CheckInResultMap" type="FCheckIn">
+	<id property="id" column="CHECKID"/>
+	<result property="roomID" column="ROOMID"/>
+	<result property="roomType" column="ROOMTYPE"/>
+	<result property="guestName" column="GUESTBANE"/>
+	<result property="code" column="DOCUMENTCODE"/>
+	<result property="price" column="PRICE"/>
+	<result property="arriveTime" column="ARRIVETIME"/>
+	<result property="leaveTime" column="LEAVETIME"/>
+	<result property="employeeID" column="EMPLOYEEID"/>	
+	</resultMap>
+	
+
+	<select id="selectByAll" resultType="FCheckIn">
+	select * from checkin
+	</select>
+</mapper>
