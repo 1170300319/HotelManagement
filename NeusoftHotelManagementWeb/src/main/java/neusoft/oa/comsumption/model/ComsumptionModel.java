@@ -9,7 +9,10 @@ public class ComsumptionModel {
 	private int goodsID = 0;
 	private int count = 0;
 	private int perPrice = 0;
+	private int totalPrice = 0;
 	private int employeeID = 0;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -45,6 +48,12 @@ public class ComsumptionModel {
 	}
 	public void setEmployeeID(int employeeID) {
 		this.employeeID = employeeID;
+	}
+	public int getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 	
 	

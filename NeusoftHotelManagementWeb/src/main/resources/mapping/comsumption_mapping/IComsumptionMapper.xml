@@ -2,41 +2,39 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="neusoft.oa.hr.mapper.IDepartmentMapper">
+<mapper namespace="neusoft.oa.comsumption.mapper.IComsumptionMapper">
 
-	<resultMap id ="DepartmentResultMap" type="Department">
-	<id property="no" column="DEPTNO"/>
-	<result property="code" column="DEPTCODE"/>
-	<result property="name" column="DEPTNAME"/>	
+	<resultMap id ="ComsumptionResultMap" type="Comsumption">
+	<id property="id" column="COMSUMPID"/>
+	<result property="checkID" column="CHECKID"/>
+	<result property="goodsID" column="GOODSID"/>
+	<result property="count" column="COUNT"/>
+	<result property="perPrice" column="PERPRICE"/>
+	<result property="totalPrice" column="TOTALPRICE"/>
+	<result property="employeeID" column="EMPLOYEEID"/>	
 	</resultMap>
 	
 
-	<insert id="insert" parameterType="Department" keyProperty="no" keyColumn="DEPTNO" useGeneratedKeys="true">
-	insert into oa_department (DEPTCODE, DEPTNAME) values ('${code}','${name}');
+	<insert id="insert" parameterType="Comsumption" keyProperty="id" keyColumn="COMSUMPID" useGeneratedKeys="true">
+	insert into comsumption (CHECKID, GOODSID, COUNT, PERPRICE, TOTALPRICE, EMPLOYEEID) 
+	values (${checkID},${goodsID}, ${count}, ${perPrice}, ${totalPrice}, ${employeeID});
 	</insert>
 
 	<update id="update">
-	update oa_department set DEPTCODE = '${code}', DEPTNAME = '${name}' where DEPTNO = ${no}
+	update comsumption set CHECKID=${checkID}, GOODSID=${goodsID}, COUNT=${count}, PERPRICE=${perPrice},
+	TOTALPRICE=${totalPrice}, EMPLOYEEID=${employeeID} where COMSUMPID = ${id}
 	</update>
 
 	<delete id="delete">
-	delete from oa_department where DEPTNO = ${no}
+	delete from comsumption where COMSUMPID = ${id}
 	</delete>
 
-	<select id="selectByAll" resultType="Department">
-	select * from oa_department
+	<select id="selectByAll" resultType="Comsumption">
+	select * from comsumption
 	</select>
 
-  	<select id="selectByNo" parameterType="_int" resultMap="DepartmentResultMap">
-	select * from oa_department where DEPTNO = ${no}  
-	</select>
-	
-  	<select id="selectByAllWithPage" parameterType="_int" resultMap="DepartmentResultMap">
-	select * from oa_department limit #{start}, #{rows}  
-	</select>
-
-  	<select id="selectCountByAll" resultType="_int">
-	select count(*) from oa_department 
+  	<select id="selectByComsumptionID" parameterType="_int" resultMap="ComsumptionResultMap">
+	select * from comsumption where COMSUMPID = ${id}  
 	</select>
 	
 </mapper>
