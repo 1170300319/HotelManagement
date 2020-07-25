@@ -1,0 +1,6 @@
+
+NeusoftHotelManagementWeb/src/main/java/neusoft/oa/form/service/IFComsumptionService.java
+NeusoftHotelManagementWeb/src/main/java/neusoft/oa/form/controller/FComsumptionController.java
+NeusoftHotelManagementWeb/src/main/java/neusoft/oa/form/mapper/IFComsumptionMapper.java
+NeusoftHotelManagementWeb/src/main/java/neusoft/oa/form/model/FComsumptionModel.java
+NeusoftHotelManagementWeb/src/main/java/neusoft/oa/form/controller/FComsumptionController.java
