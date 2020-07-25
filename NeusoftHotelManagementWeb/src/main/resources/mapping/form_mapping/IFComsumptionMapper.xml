@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="neusoft.oa.form.mapper.IComsumptionMapper">
+<mapper namespace="neusoft.oa.form.mapper.IFComsumptionMapper">
 
 	<resultMap id ="ComsumptionResultMap" type="FComsumption">
 	<id property="id" column="COMSUMPID"/>

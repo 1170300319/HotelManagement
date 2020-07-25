@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import neusoft.oa.form.mapper.IFComsumptionMapper;
-import neusoft.oa.form.model.ComsumptionModel;
+import neusoft.oa.form.model.FComsumptionModel;
 import neusoft.oa.form.service.IFComsumptionService;
 
 
@@ -20,7 +20,7 @@ public class FComsumptionServiceImpl implements IFComsumptionService{
 
 
 	@Override
-	public List<ComsumptionModel> getListByAll() throws Exception {
+	public List<FComsumptionModel> getListByAll() throws Exception {
 		return comsumptionMapper.selectByAll();
 	}
 }
