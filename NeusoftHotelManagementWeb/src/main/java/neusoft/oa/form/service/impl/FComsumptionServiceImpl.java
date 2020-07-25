@@ -6,21 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import neusoft.oa.form.mapper.IComsumptionMapper;
-import neusoft.oa.form.model.ComsumptionModel;
-import neusoft.oa.form.service.IComsumptionService;
+import neusoft.oa.form.mapper.IFComsumptionMapper;
+import neusoft.oa.form.model.FComsumptionModel;
+import neusoft.oa.form.service.IFComsumptionService;
 
 
 @Service("FcomsumptionService")
 @Transactional // 环绕事务
-public class ComsumptionServiceImpl implements IComsumptionService{
+public class FComsumptionServiceImpl implements IFComsumptionService{
 
 	@Autowired
-	private IComsumptionMapper comsumptionMapper = null;
+	private IFComsumptionMapper comsumptionMapper = null;
 
 
 	@Override
-	public List<ComsumptionModel> getListByAll() throws Exception {
+	public List<FComsumptionModel> getListByAll() throws Exception {
 		return comsumptionMapper.selectByAll();
 	}
 }

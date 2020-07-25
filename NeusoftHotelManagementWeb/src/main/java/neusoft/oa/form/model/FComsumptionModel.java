@@ -3,7 +3,7 @@ package neusoft.oa.form.model;
 import org.apache.ibatis.type.Alias;
 
 @Alias("FComsumption")
-public class ComsumptionModel {
+public class FComsumptionModel {
 	private int id = 0;
 	private int checkID = 0;
 	private int goodsID = 0;

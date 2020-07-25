@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import neusoft.oa.form.model.ComsumptionModel;
-import neusoft.oa.form.service.IComsumptionService;
+import neusoft.oa.form.model.FComsumptionModel;
+import neusoft.oa.form.service.IFComsumptionService;
 import neusoft.oa.result.Result;
 
 @RestController
 @RequestMapping(value="/Fcomsumption")
-public class ComsumptionController {
+public class FComsumptionController {
 	@Autowired
-	private IComsumptionService cs = null;
+	private IFComsumptionService cs = null;
 
 	@RequestMapping(value="/list/all", method=RequestMethod.GET)
-	public Result<ComsumptionModel> getListByAll(ComsumptionModel cm) throws Exception{
-		Result<ComsumptionModel> result = new Result<ComsumptionModel>();
+	public Result<FComsumptionModel> getListByAll(FComsumptionModel cm) throws Exception{
+		Result<FComsumptionModel> result = new Result<FComsumptionModel>();
 		result.setList(cs.getListByAll());
 		result.setStatus("OK");
 		result.setMessage("获取所有消费记录");
