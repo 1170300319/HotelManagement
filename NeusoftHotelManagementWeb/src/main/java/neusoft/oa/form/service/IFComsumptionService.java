@@ -2,9 +2,9 @@ package neusoft.oa.form.service;
 
 import java.util.List;
 
-import neusoft.oa.form.model.FComsumptionModel;
+import neusoft.oa.form.model.ComsumptionModel;
 
 
 public interface IFComsumptionService {
-	public List<FComsumptionModel> getListByAll() throws Exception;
+	public List<ComsumptionModel> getListByAll() throws Exception;
 }
